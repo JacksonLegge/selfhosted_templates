@@ -3471,6 +3471,11 @@
         "default": "MULLVAD"
       },
       {
+        "name": "OPENVPN_CONFIG",
+        "label": "OPENVPN_CONFIG",
+        "default": ""
+      },
+      {
         "name": "OPENVPN_USERNAME",
         "label": "OPENVPN_USERNAME",
         "default": ""
