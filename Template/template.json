@@ -2188,7 +2188,7 @@
     "volumes": [
       {
         "container": "/data",
-        "bind": "!Data"
+        "bind": "!Config/Navidrome"
       },
       {
         "container": "/music",
