@@ -2188,11 +2188,11 @@
     "volumes": [
       {
         "container": "/data",
-        "bind": "!Config/Navidrome"
+        "bind": "!config/Navidrome"
       },
       {
         "container": "/music",
-        "bind": "!Music"
+        "bind": "!music"
       }
     ],
     "env": [
