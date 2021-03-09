@@ -3876,7 +3876,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-        "WebUI": "51820:51820/udp"
+        "WireGuard": "51820:51820/udp"
       }
     ],
     "volumes": [
