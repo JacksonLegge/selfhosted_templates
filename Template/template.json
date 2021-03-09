@@ -2212,7 +2212,7 @@
     "type": 1,
     "title": "Nextcloud",
     "name": "nextcloud",
-    "description": "Nextcloud is a A safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.",
+    "description": "Nextcloud is a a safe home for all your data. Access & share your files, calendars, contacts, mail & more from any device, on your terms.",
     "logo": "https://user-images.githubusercontent.com/29705727/40315141-75a684e2-5d12-11e8-9732-b9bf680d8595.png",
     "image": "linuxserver/nextcloud:latest",
     "categories": [
@@ -3854,6 +3854,47 @@
         "name": "PUID",
         "label": "PUID",
         "default": "!PUID"
+      },
+      {
+        "name": "PGID",
+        "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "Wireguard",
+    "name": "wireguard",
+    "description": "WireGuard is a free and open-source software application and communication protocol that implements virtual private network techniques to create secure point-to-point connections in routed or bridged configurations",
+    "logo": "https://symbols-electrical.getvecta.com/stencil_101/69_wireguard.f5409a7bc7.png",
+    "image": "linuxserver/wireguard:latest",
+    "categories": [
+      "Other"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "WebUI": "51820:51820/udp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "!config/WireGuard"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "label": "PUID",
+        "default": "!PUID"
+      },
+      {
+        "name": "TZ",
+        "label": "TZ",
+        "default": "!localtime"
       },
       {
         "name": "PGID",
