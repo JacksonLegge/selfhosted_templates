@@ -1898,7 +1898,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-        "Minetest": "30000:30000/udp",
+        "Minetest": "30000:30000/udp"
       }
     ],
     "volumes": [
@@ -1924,7 +1924,7 @@
     "title": "Minecraft Server",
     "name": "minecraft",
     "description": "Server version of minecraft with support for Forge",
-    "logo": "https://external-preview.redd.it/INBHMCNdcPNCBvgGn3yQ-RH4jiAhFP4bde7-wCC2xiw.png?auto=webp&s=7fbcf884991ea6c916da84752af364fbf962687b",
+    "logo": "https://i.pinimg.com/originals/a6/08/ee/a608ee054c1f1f4f52582805184577c5.jpg",
     "image": "itzg/minecraft-server:latest",
     "categories": [
       "Other"
