@@ -1898,7 +1898,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
       {
-        "Minetest": "30000:30000/udp"
+        "Minetest": "30000:30000/udp",
       }
     ],
     "volumes": [
@@ -1915,6 +1915,52 @@
       {
         "name": "PGID",
         "label": "PGID",
+        "default": "!PGID"
+      }
+    ]
+  },
+  {
+    "type": 1,
+    "title": "Minecraft Server",
+    "name": "minecraft",
+    "description": "Server version of minecraft with support for Forge",
+    "logo": "https://external-preview.redd.it/INBHMCNdcPNCBvgGn3yQ-RH4jiAhFP4bde7-wCC2xiw.png?auto=webp&s=7fbcf884991ea6c916da84752af364fbf962687b",
+    "image": "itzg/minecraft-server:latest",
+    "categories": [
+      "Other"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "Minecraft": "25565:25565/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/data",
+        "bind": "!config/minecraft"
+      }
+    ],
+    "env": [
+      {
+        "name": "EULA",
+        "label": "EULA",
+        "default": "TRUE"
+      },
+      {
+        "name": "VERSION",
+        "label": "VERSION",
+        "default": "LATEST"
+      },
+      {
+        "name": "UID",
+        "label": "UID",
+        "default": "!PUID"
+      },
+      {
+        "name": "GID",
+        "label": "GID",
         "default": "!PGID"
       }
     ]
