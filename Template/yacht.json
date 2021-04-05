@@ -2210,6 +2210,54 @@
     },
     {
       "type": 1,
+      "title": "Nextcloud",
+      "name": "Nextcloud",
+      "description": "Nextcloud is a suite of client-server software for creating and using file hosting services",
+      "logo": "https://nextcloud.com/wp-content/themes/next/assets/img/common/nextcloud-square-logo.png?x53054",
+      "image": "nextcloud:latest",
+      "categories": [
+        "Other"
+      ],
+      "platform": "linux",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        {
+          "WebUI": "12030:80/tcp"
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/var/www/html",
+          "bind": "!config/Nextcloud/Main"
+        },
+        {
+          "container": "/var/www/html/custom_apps",
+          "bind": "!config/Nextcloud/CustomApps"
+        },
+        {
+          "container": "/var/www/html/config",
+          "bind": "!config/Nextcloud/Config"
+        },
+        {
+          "container": "/var/www/html/data",
+          "bind": "!data/Nextcloud"
+        }
+      ],
+      "env": [
+        {
+          "name": "PUID",
+          "label": "PUID",
+          "default": "!PUID"
+        },
+        {
+          "name": "PGID",
+          "label": "PGID",
+          "default": "!PGID"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "NZBGet",
       "name": "nzbget",
       "description": "NZBGet is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources. It supports all platforms including Windows, Mac, Linux and works on all devices including PC, NAS, WLAN routers and media players",
