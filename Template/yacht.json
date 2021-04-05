@@ -540,9 +540,9 @@
           "default": "!PUID"
         },
         {
-          "name": "GUID",
-          "label": "PUID",
-          "default": "!PUID"
+          "name": "PGID",
+          "label": "PGID",
+          "default": "!PGID"
         },
         {
           "name": "TZ",
